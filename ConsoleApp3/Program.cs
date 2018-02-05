@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
+    /// <summary>
+    /// Compress/Decompress program
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Defines the entry point of the application.
+        /// </summary>
         static void Main(string[] args)
         {
             Console.WriteLine("Do you want to compress or decompress file? (c/d): ");
@@ -48,6 +49,10 @@ namespace ConsoleApp3
             //DecompressFile(path + fileToDeCompress);
         }
 
+        /// <summary>
+        /// Compresses the file.
+        /// </summary>
+        /// <param name="fileName">Name of the file.</param>
         public static void compressFile(string fileName)
         {
             Stopwatch stopWatch = new Stopwatch();
@@ -73,6 +78,12 @@ namespace ConsoleApp3
             }
         }
 
+        /// <summary>
+        /// Decompresses the file.
+        /// </summary>
+        /// <param name="fileName">Name of the file.</param>
+        /// <param name="location">The location.</param>
+        /// <param name="newName">The new name.</param>
         public static void DecompressFile(string fileName, string location, string newName)
         {
             Stopwatch stopWatch = new Stopwatch();
